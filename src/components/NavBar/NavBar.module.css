@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-block: 5px;
 }
 
 .social {
@@ -13,7 +14,7 @@
 .logo {
     flex: 1;
     text-align: center;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold;
 
 }
@@ -23,5 +24,61 @@
     align-items: center;
     gap: 20px;
     flex: 1;
-    font-size: 20px;
+    font-size: 18px;
 }
+
+
+
+.links > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    transition: all 150ms ease-in-out;
+}
+
+.links > a:hover, .links > span:hover {
+    transform: scale(1.05) rotateZ(-5deg);
+}
+
+@media screen and (max-width:1280px) {
+    .logo {
+        font-size: 28px;
+    }
+
+    .links {
+        font-size: 16px;
+        gap: 15px;
+    }
+    
+}
+
+@media screen and (max-width:1024px) {
+    .social {
+        display: none;
+    }
+
+    .logo {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .logo {
+        font-size: 22px;
+    }
+
+}
+
+@media screen and (max-width:640px) {
+    .links {
+        justify-content: flex-end;
+    }
+
+    .anchor {
+        display: none !important;
+    }
+
+}
+

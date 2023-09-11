@@ -1,4 +1,5 @@
 import React from 'react'
+import { FcAbout, FcBusinessContact, FcHome } from 'react-icons/fc'
 import styles from "./NavBar.module.css"
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,9 +18,18 @@ const NavBar = () => {
         <div className={styles.logo}>NextDev Blog</div>
         <div className={styles.links}>
             <ThemeToggle/>
-            <Link href="/">Homepage</Link>
-            <Link href="/">Contact</Link>
-            <Link href="/">About</Link>
+            <Link href="/" className={styles.anchor}>
+              Home
+              <FcHome/>
+            </Link>
+            <Link href="/" className={styles.anchor}>
+              Contact
+              <FcBusinessContact/>
+            </Link>
+            <Link href="/" className={styles.anchor}>
+              About
+              <FcAbout />
+            </Link>
             <AuthLinks/>
         </div>
     </div>
